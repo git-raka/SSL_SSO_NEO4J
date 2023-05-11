@@ -65,4 +65,19 @@ dbms.ssl.policy.https.base_directory=/home/raka/neo4j-enterprise-4.4.19/certific
 dbms.connector.https.listen_address=0.0.0.0:7473
 dbms.connector.https.advertised_address=neo4j.devneo.cloud:7473
 ```
+# PART TWO = SINGLE SIGN ON NEO4J
+```
+dbms.security.authentication_providers=oidc-google
+dbms.security.authorization_providers=oidc-google,native
+dbms.security.oidc.google.display_name=Google
+dbms.security.oidc.google.auth_flow=pkce
+dbms.security.oidc.google.well_known_discovery_uri=https://accounts.google.com/.well-known/openid-configuration
+dbms.security.oidc.google.audience=264800647591-h8m386l9ntuntirps9i0bf9g8ig3hrvu.apps.googleusercontent.com
+dbms.security.oidc.google.claims.username=email
+dbms.security.oidc.google.params=client_id=264800647591-h8m386l9ntuntirps9i0bf9g8ig3hrvu.apps.googleusercontent.com;response_type=code;scope=openid profile email
+dbms.security.oidc.google.token_params=client_secret=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
+dbms.security.oidc.google.config=token_type_principal=id_token;token_type_authentication=id_token
+```
+
+<img width="823" alt="image" src="https://github.com/git-raka/SSL_Neo4j/assets/77326619/5c508d14-a0a4-42a7-874c-5fc8853713d1">
 
