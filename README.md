@@ -64,6 +64,16 @@ dbms.ssl.policy.bolt.base_directory=/home/raka/neo4j-enterprise-4.4.19/certifica
 dbms.ssl.policy.https.base_directory=/home/raka/neo4j-enterprise-4.4.19/certificates/https
 dbms.connector.https.listen_address=0.0.0.0:7473
 dbms.connector.https.advertised_address=neo4j.devneo.cloud:7473
+
+#OPTIONAL IF YOU NEED CLUSTER
+dbms.ssl.policy.cluster.enabled=true
+dbms.ssl.policy.cluster.base_directory=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster/
+dbms.ssl.policy.default.base_directory=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster
+dbms.ssl.policy.default.trusted_dir=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster/trusted
+dbms.ssl.policy.default.revoked_dir=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster/revoked
+dbms.ssl.policy.cluster.client_auth=NONE
+dbms.ssl.policy.cluster.private_key=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster/neo4j.key
+dbms.ssl.policy.cluster.public_certificate=/home/neo4j/neo4j-enterprise-4.4.18/certificates/cluster/neo4j.cert
 ```
 # PART TWO = SINGLE SIGN ON NEO4J
 ```
